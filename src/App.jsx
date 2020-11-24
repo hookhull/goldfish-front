@@ -167,7 +167,7 @@ export default function CustomizedTabs() {
             <Button onClick={handleOpen} variant="outlined">
               <EmailOutlinedIcon />Email
             </Button>
-            <Button　onClick={()=> window.open("", "_blank")} variant="outlined">
+            <Button　onClick={()=> window.open("https://github.com/hookhull", "_blank")} variant="outlined">
               <GitHubIcon />GitHub
             </Button>
           </div>
