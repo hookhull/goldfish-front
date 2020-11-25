@@ -51,13 +51,14 @@ export default function GoldfishFront() {
             <p>このサイト。主な使用技術はReact,Firebase。</p>
             <p>Material-uiのカスタマイズと、お問い合わせフォームの作成によって成り立っています。</p>
             <p>デプロイはFirebaseで行っています。</p>
+            <p>一応レスポンシブ対応もしています。</p>
           </Typography>
         </AccordionDetails>
       </Accordion>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button onClick={()=> window.open("", "_blank")} size="small" color="primary">
+        <Button onClick={()=> window.open("https://goldfish-front.web.app/", "_blank")} size="small" color="primary">
           見てみる(別タブで開きます)
         </Button>
       </CardActions>

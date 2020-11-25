@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import {withStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
@@ -87,17 +87,17 @@ export default function MySkillset() {
           <StyledTab label="今注力していること" {...a11yProps(3)} />
         </StyledTabs>
       </div>
-      <div>
-        <TabPanel value={value} index={0} className='p-my-skill'>
+      <div className='p-skill-panels'>
+        <TabPanel value={value} index={0}>
             <FrontEnd />
         </TabPanel>
-        <TabPanel value={value} index={1} className='p-my-skill'>
+        <TabPanel value={value} index={1}>
             <BackEnd />
         </TabPanel>
-        <TabPanel value={value} index={2} className='p-my-skill'>
+        <TabPanel value={value} index={2}>
             <DevOps />
         </TabPanel>
-        <TabPanel value={value} index={3} className='p-my-skill'>
+        <TabPanel value={value} index={3}>
             <Now />
         </TabPanel>
       </div>

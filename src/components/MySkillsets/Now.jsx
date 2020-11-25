@@ -35,14 +35,14 @@ export default function SimpleCard() {
 
   return (
     <div className='p-card-frame'>
-    <Card className={classes.root}>
-      <CardContent>
-        <Typography variant="body2" component="p">
-          <p>バックエンドを中心に伸ばしていけたらと思っています。</p>
-          <p>また、api等、周辺の技術も確かなものにしていけたらと思っています。</p>
-        </Typography>
-      </CardContent>
-    </Card>
+      <Card className={classes.root}>
+        <CardContent>
+          <Typography variant="body2" component="p">
+            <p>バックエンドを中心に伸ばしていけたらと思っています。</p>
+            <p>また、api等、周辺の技術も確かなものにしていけたらと思っています。</p>
+          </Typography>
+        </CardContent>
+      </Card>
     </div>
   );
 }

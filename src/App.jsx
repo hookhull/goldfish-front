@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -109,75 +109,78 @@ export default function CustomizedTabs() {
 
   return (
     <section className='p-section'>
-      <div className='header-logo-frame'>
-        <div className='header-logo'>
+      <div className='header-logo'>
           <h2>H.H.の作品展</h2>
+      </div>
+      <div className='p-tabs-frame'>
+        <div className='p-tabs'>
+          <StyledTabs value={value} onChange={handleChange} aria-label="styled tabs example" variant="scrollable">
+            <StyledTab label="ようこそ" {...a11yProps(0)} />
+            <StyledTab label="このサイトについて" {...a11yProps(1)} />
+            <StyledTab label="自己紹介" {...a11yProps(2)} />
+            <StyledTab label="使える技術" {...a11yProps(3)} />
+            <StyledTab label="作品集" {...a11yProps(4)} />
+            <StyledTab label="お問い合わせ" {...a11yProps(5)} />
+          </StyledTabs>
         </div>
-      </div>
-    <div className={classes.root}>
-      <div className={classes.demo2}>
-        <StyledTabs value={value} onChange={handleChange} aria-label="styled tabs example" variant="scrollable" centered>
-          <StyledTab label="ようこそ" {...a11yProps(0)} />
-          <StyledTab label="このサイトについて" {...a11yProps(1)} />
-          <StyledTab label="自己紹介" {...a11yProps(2)} />
-          <StyledTab label="使える技術" {...a11yProps(3)} />
-          <StyledTab label="作品集" {...a11yProps(4)} />
-          <StyledTab label="お問い合わせ" {...a11yProps(5)} />
-        </StyledTabs>
-      </div>
-      <div >
-        <TabPanel value={value} index={0}>
+
+      <TabPanel value={value} index={0}>
+        <div className='p-panels'>          
           <div className='p-frame'>
             <p>エピグラフ</p>
             <h2>「敢えて賢明であれ」</h2>
             <p>(イマヌエル・カント『啓蒙とは何か？』)</p>
           </div>
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-        <div className='p-frame'>
-        <p>こんにちは!</p>
-          <p>このサイトはエンジニア志望の私、H.H.が自己紹介のために作ったサイトです。</p>
-          <p>作品や使えるスキルをまとめています。</p>
-          <p>修行中の身ですが、まずはぜひ一度、ご覧になっていってください。</p>
-        </div>
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-        <div className='p-frame'>
-          <p>1995年生まれ、東京都出身。</p>
-          <p>エンジニア志望で、作品製作が大好きです。</p>
-          <p>ライフワークは哲学で、そちらの作品もいずれご紹介できればと思っています。</p>
-          <p>尊敬する人物はイマヌエル・カント。好きな漫画は『金魚王国の崩壊』(模造クリスタル)。</p>
-          <div className='questions'>
-            <p>疑問にお答えします！</p>
-            <Questions />
+        </div>          
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        <div className='p-panels'>
+          <div className='p-frame'>
+          <p>こんにちは!</p>
+            <p>このサイトはエンジニア志望の私、H.H.が自己紹介のために作ったサイトです。</p>
+            <p>作品や使えるスキルをまとめています。</p>
+            <p>修行中の身ですが、まずはぜひ一度、ご覧になっていってください。</p>
           </div>
         </div>
-        </TabPanel>
-         <TabPanel value={value} index={3}>
-            <MySkillset />
-         </TabPanel>
-         <TabPanel value={value} index={4}>
-          <div className='p-garelly-frame'>
-            <GoldfishFront />
-            <Atrier />
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <div className='p-panels'>
+          <div className='p-frame'>
+            <p>1995年生まれ、東京都出身。</p>
+            <p>エンジニア志望で、作品製作が大好きです。</p>
+            <p>ライフワークは哲学で、そちらの作品もいずれご紹介できればと思っています。</p>
+            <p>尊敬する人物はイマヌエル・カント。好きな漫画は『金魚王国の崩壊』(模造クリスタル)。</p>
+            <div className='questions'>
+              <p>疑問にお答えします！</p>
+              <Questions />
+            </div>
           </div>
-         </TabPanel>
-         <TabPanel value={value} index={5}>
-          <div className='p-contact-frame'>
-            <Button onClick={handleOpen} variant="outlined">
-              <EmailOutlinedIcon />Email
-            </Button>
-            <Button　onClick={()=> window.open("https://github.com/hookhull", "_blank")} variant="outlined">
-              <GitHubIcon />GitHub
-            </Button>
-          </div>
-          <FormDialog
-          open={open}
-          handleClose={handleClose} />
-         </TabPanel>
+        </div>
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        <div className='p-panels'>
+          <MySkillset />
+        </div>
+      </TabPanel>
+      <TabPanel value={value} index={4}>
+        <div className='p-panels'>
+          <GoldfishFront />
+          <Atrier />
+        </div>
+      </TabPanel>
+      <TabPanel value={value} index={5}>
+        <div className='p-panels'>
+          <Button onClick={handleOpen} variant="outlined">
+            <EmailOutlinedIcon />Email
+          </Button>
+          <Button　onClick={()=> window.open("https://github.com/hookhull", "_blank")} variant="outlined">
+            <GitHubIcon />GitHub
+          </Button>
+        </div>
+        <FormDialog open={open} handleClose={handleClose} />
+      </TabPanel>
         <Typography className={classes.padding} />
       </div>
-    </div>
     </section>
   );
 }
