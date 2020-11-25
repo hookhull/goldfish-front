@@ -1,5 +1,5 @@
 import React, {useCallback, useState} from 'react';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import {withStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
@@ -71,27 +71,7 @@ const StyledTab = withStyles((theme) => ({
   },
 }))((props) => <Tab disableRipple {...props} />);
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    desplay: 'flex',
-    flexWrap: 'wrap',
-    flexGrow: 1,
-  },
-  padding: {
-    padding: theme.spacing(3),
-  },
-  demo2: {
-    position: 'absolute',
-    top: '10%',
-    left: '50%',
-    transform: 'translateX(-50%)',
-    backgroundColor: 'rgba(255,255,255,0.5)',
-    width: '80%',
-  },
-}));
-
 export default function CustomizedTabs() {
-  const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -179,7 +159,6 @@ export default function CustomizedTabs() {
           </div>
         <FormDialog open={open} handleClose={handleClose} />
       </TabPanel>
-        <Typography className={classes.padding} />
       </div>
     </section>
   );
