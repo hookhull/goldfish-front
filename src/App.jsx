@@ -176,7 +176,7 @@ export default function CustomizedTabs() {
           <Button　onClick={()=> window.open("https://github.com/hookhull", "_blank")} variant="outlined">
             <GitHubIcon />GitHub
           </Button>
-        </div>
+          </div>
         <FormDialog open={open} handleClose={handleClose} />
       </TabPanel>
         <Typography className={classes.padding} />
