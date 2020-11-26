@@ -57,7 +57,7 @@ export default function SimpleCard() {
           初心者
         </Typography>
         <Typography variant="body2" component="p">
-        トラハック『日本一わかりやすいReact-Redux入門』で学んだ程度。
+          掌田津耶野『React.js＆Next.js超入門』、トラハック『日本一わかりやすいReact-Redux入門』で学んだ程度。
         </Typography>
       </CardContent>
     </Card>
