@@ -48,6 +48,19 @@ export default function SimpleCard() {
           </Typography>
         </CardContent>
       </Card>
+      <Card className={classes.root}>
+        <CardContent>
+          <Typography variant="h5" component="h2">
+            MySQL
+          </Typography>
+          <Typography className={classes.pos} color="textSecondary">
+            学習中
+          </Typography>
+          <Typography variant="body2" component="p">
+            Progate等で学んだ程度。
+          </Typography>
+        </CardContent>
+      </Card>
     </div>
   );
 }
