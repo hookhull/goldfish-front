@@ -31,7 +31,7 @@ export default function Questions() {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-              人生の指針として最高の哲学書を書こうと、哲学や数学基礎論をひたすら研究していました。かなり本気でした。
+              フリーターをしながら、人生の指針として最高の哲学書を書こうと、哲学や数学基礎論をひたすら研究していました。かなり本気でした。
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>

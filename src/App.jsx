@@ -107,7 +107,7 @@ export default function CustomizedTabs() {
       <TabPanel value={value} index={0}>
         <div className='p-panels'>          
           <div className='p-frame'>
-            <p>エピグラフ</p>
+            <p>モットー</p>
             <h2>「敢えて賢明であれ」</h2>
             <p>(イマヌエル・カント『啓蒙とは何か？』)</p>
           </div>
